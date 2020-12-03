@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="css/home.css">
+    
+
+    <title>Home</title>
+</head>
+
+<body >
+    
+    <div class="container">
+        
+           <div class="col-lg-6 col-md-6 content-item">
+               <img src="img1.jpg" alt="Image" class="tm-image">
+           </div>
+           <div class="col-lg-6 col-md-6 content-item content-item-1 background">
+            <h2 class="section-title">Apply For Scholorship</h2>
+               <p> Applying For the Scholorship At Sushant University is a completely easy task, you will need to enter some neccesary details and you are all good to apply.</p>
+               <p>Click the Button below to go to the Application Page.</p>
+               <button type="button" class="btn btn-big dark-blue-btn">Apply Now</button>
+           </div>
+       </section>
+
+       <section class="col-md-12 content padding" id="services">
+        <div class="col-lg-6 col-md-6 col-md-push-6 content-item">
+           <img src="images/2.jpg" alt="Image" class="tm-image">
+       </div>
+       <div class="col-lg-6 col-md-6 col-md-pull-6 content-item background flexbox">
+           <h2 class="section-title">List Of Scholorship Acheivers</h2>
+           <p class="section-text">For getting the list of the students who got the scholorship Click the Button Below</p>
+           <button type="button" class="btn btn-big dark-blue-btn">List Of Students</button>
+        </div>
+
+   </section>
+
+
+   <section class="col-md-12 content" id="clients">
+       <div class="col-lg-6 col-md-6 content-item">
+           <img src="images/3.jpg" alt="Image" class="tm-image">
+       </div>
+       <div class="col-lg-6 col-md-6 content-item background flexbox">
+           <h2 class="section-title">Check Result</h2>
+           <p>For Checking Your Own result Enter the details and check it Now. </p>
+           <button type="button" class="btn btn-big dark-blue-btn">Check Now</button>            
+       </div>
+   </section>
+
+
+   <section class="col-md-12 content" id="contact">
+       <div class="col-lg-6 col-md-6 col-md-push-6 content-item">
+           <img src="images/4.jpg" alt="Image" class="tm-image">
+       </div>
+       <div class="col-lg-6 col-md-6 col-md-pull-6 content-item background flexbox">
+           <h2 class="section-title">Contact Us</h2>
+           <p class="margin-b-25">Now, Contact Sushant Unincersity At your Fingertips.</p>
+
+           
+           <form method="post" name="contact-form" class="contact-form">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="form-group">
+                    <input name="name" type="text" class="form-control" id="name" placeholder="Your Name..." required>
+                </div>    
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 pad-l-3">
+                <div class="form-group contact-field">
+                    <input name="email" type="email" class="form-control" id="email" placeholder="Your Email..." required>
+                </div>    
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="form-group contact-field">
+                    <input name="subject" type="text" class="form-control" id="subject" placeholder="Your Subject..." required>
+                </div>    
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="form-group contact-field">
+                    <textarea name="message" rows="5" class="form-control" id="message" placeholder="Write your message..." required></textarea>
+                </div>    
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="form-group margin-b-0">
+                    <button type="submit" id="form-submit" class="btn no-bg btn-contact">Submit</button>
+                </div>    
+            </div>
+        </form>
+        <!--</div> -->
+        <div id="msgSubmit" class="h3 text-center hidden">Message Submitted!</div>
+
+    </div>
+
+</section>
+
+<footer class="col-md-12 content" id="externals">
+ <div class="col-lg-6 col-md-6 last">
+   <img src="images/5.png" alt="Image" class="tm-image">
+</div>
+<div class="col-lg-6 col-md-6 background last about-text-container">
+   <h2 class="section-title">About Sushant University</h2>
+   <p class="about-text">Sushant University provides merit-based, need-based special scholarships and fee concessions to undergraduate and postgraduate students as per university policy. The objective of these scholarships/ fee concessions is to support and motivate students for higher education and facilitate in their desire to learn further.</p>       
+</div>
+</footer>
+
+</div>
+
+<div class="text-center footer">
+	<div class="container">
+		Copyright @ 2012 Company Name
+    </div>
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.singlePageNav.min.js"></script>
+
+<script>
+
+function checkScrollPosition() {
+    if($(window).scrollTop() > 50) {
+      $(".fixed-header").addClass("scroll");
+  } else {        
+      $(".fixed-header").removeClass("scroll");
+  }
+}
+
+$(document).ready(function () {   
+    // Single page nav
+    $('.fixed-header').singlePageNav({
+        offset: 59,
+        filter: ':not(.external)',
+        updateHash: true        
+    });
+
+    checkScrollPosition();
+
+    // nav bar
+    $('.navbar-toggle').click(function(){
+        $('.main-menu').toggleClass('show');
+    });
+
+    $('.main-menu a').click(function(){
+        $('.main-menu').removeClass('show');
+    });
+});
+
+$(window).on("scroll", function() {
+    checkScrollPosition();    
+});
+</script>
+</body>
+</html>
