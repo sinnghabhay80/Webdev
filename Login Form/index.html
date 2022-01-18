@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="index.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+      <form>
+        <div class="user-details">
+          <div class="input-box">
+            <label class="details">Full Name</label>
+            <input type="text" placeholder="Enter your name" id="fullname" required>
+          </div>
+          <div class="input-box">
+            <label class="details">Username</label>
+            <input type="text" placeholder="Enter your username" id="username" required>
+          </div>
+          <div class="input-box">
+            <label class="details">Email</label>
+            <input type="email" placeholder="Enter your email" id="email" required>
+          </div>
+          <div class="input-box">
+            <label class="details">Phone Number</label>
+            <input type="number" placeholder="Enter your number" id="phonenumber" required>
+          </div>
+          <div class="input-box">
+            <label class="details">Password</label>
+            <input type="password" placeholder="Enter your password" id="password" required>
+          </div>
+          <div class="input-box">
+            <label class="details">Confirm Password</label>
+            <input type="password" placeholder="Confirm your password" id="confirmpassword" required>
+          </div>
+        </div>
+        <div class="gender-details">
+
+          <label class="gender-title">Gender</label>
+
+          <input type="radio" name="gender" id="dot-1" value="Male" required>
+          <input type="radio" name="gender" id="dot-2" value="Female" required>
+          <input type="radio" name="gender" id="dot-3" value="Prefer not to say" required>
+          
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" value="Register" onclick="formcheck();">
+        </div>
+      </form>
+    </div>
+  </div>
+
+<script>
+
+  function formcheck() {
+    let password = document.getElementById("password").value;
+    let confirmpassword = document.getElementById("confirmpassword").value;
+
+    if(password !== confirmpassword) {alert("Password Confirmation failed!!!");}
+
+  }
+  
+</script>
+
+</body>
+</html>
