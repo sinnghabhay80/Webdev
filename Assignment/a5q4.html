@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>A5Q4</title>
+    </head>
+    <body>
+        <script>
+           let PA = parseFloat(prompt("Enetr the Purchase Amount:"));
+           let D,Net_amount ;
+           if(PA<=5000)
+           D = PA*0.02; 
+           else if(PA>5000 && PA<=10000)
+           D = PA*0.05;
+           else
+           D = PA*0.08;
+           Net_amount = PA - D;
+           alert("Net Amount: "+Net_amount+".");
+        </script>
+    </body>
+</html>

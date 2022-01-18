@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>A8Q4</title>
+    </head>
+    <body>
+             
+        <label>Enter 1st Number:</label>
+        <input type="number" id="num1"><br>
+        <label>Enter 2nd Number:</label>
+        <input type="number" id="num2"><br>
+        <button id="swap">Swap</button>
+        <p id="swapped"></p>
+        
+        <script>
+
+            document.getElementById("swap").onclick = function swap() {
+                let num1 = parseInt(document.getElementById("num1").value);
+                let num2 = parseInt(document.getElementById("num2").value);
+                document.getElementById("swapped").innerHTML = "Number1 = "+num1+", Number2 = "+num2+"." ;
+                num1 = num1 + num2 ; 
+                num2 = num1 - num2 ;
+                num1 = num1 - num2 ;
+                document.getElementById("swapped").innerHTML = document.getElementById("swapped").innerHTML + "<br>Number1 = "+num1+", Number2 = "+num2+".";
+            }
+            
+        </script>
+    </body>
+</html>

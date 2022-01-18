@@ -1,0 +1,19 @@
+<html>
+    <head>
+        <title>A8Q5</title>
+    </head>
+    <body>
+
+        <button id="generate">Generate!</button>
+        <p id="random"></p>
+
+        <script>
+
+            document.getElementById("generate").onclick = function generate() {
+                let num = Math.floor((Math.random() * 10) + 1);
+                document.getElementById("random").innerHTML = "Random Number is "+ parseInt(num)+".";
+            }
+           
+        </script>
+    </body>
+</html>

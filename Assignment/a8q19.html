@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>A8Q19</title>
+    </head>
+    <body>
+
+        <label>Enter a String:</label>
+        <input type="text" id="str"><br>
+        <button id="changing">Change</button>
+        <p id="changed"></p>
+
+        <script>
+
+            document.getElementById("changing").onclick = function change() {
+                let str = (document.getElementById("str").value).split("");
+                let len = str.length;
+                for(let i = 0; i < len; i++) {
+                    if(str[i] == 'z') {
+                        str[i] = 'a';
+                    }
+                    else if(str[i] == 'Z') {
+                        str[i] = 'A';
+                    }
+                    else if(str[i] == ' ') {
+                        str[i] = ' ';
+                    }
+                    else {
+                        str[i] = String.fromCharCode(str[i].charCodeAt(0) + 1);
+                    }
+                }
+                str = str.join("");
+                document.getElementById("changed").innerHTML = "Changed: "+str;
+            }
+           
+        </script>
+    </body>
+</html>

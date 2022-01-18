@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>A8Q17</title>
+    </head>
+    <body>
+
+        <label>Enter a String:</label>
+        <input type="text" id="str"><br>
+        <label>To be Replaced:</label>
+        <input type="text" id="replace"><br>
+        <label>Replace By:</label>
+        <input type="text" id="replaceby"><br>
+        <button id="replacing">Replace</button>
+        <p id="replaced"></p>
+
+        <script>
+
+            document.getElementById("replacing").onclick = function replacing() {
+                let str = document.getElementById("str").value;
+                let replace = document.getElementById("replace").value;
+                let replaceby = document.getElementById("replaceby").value;
+                str = str.replace(replace, replaceby);
+                document.getElementById("replaced").innerHTML = "Replaced: "+str ;
+            }
+           
+        </script>
+    </body>
+</html>

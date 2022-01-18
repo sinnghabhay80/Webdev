@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>A5Q3</title>
+    </head>
+    <body>
+        <script>
+            let daynum = parseInt(prompt("Enter the Day Number:"));
+            let dayname;
+            switch(daynum)
+            {
+                case 1 : dayname = "Monday";
+                         break;
+                case 2 : dayname = "Tuesday";
+                         break;
+                case 3 : dayname = "Wednesday";
+                         break;
+                case 4 : dayname = "Thursday";
+                         break;
+                case 5 : dayname = "Friday";
+                         break;
+                case 6 : dayname = "Saturday";
+                         break;
+                case 7 : dayname = "Sunday";
+                         break;
+                default : alert("Wrong Day Number!!!");
+                          dayname = "Invalid";
+                          break;
+            }
+            alert("The Current Day Name is "+dayname+".");
+        </script>
+    </body>
+</html>

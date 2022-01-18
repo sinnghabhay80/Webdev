@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>A8Q13</title>
+    </head>
+    <body>
+
+        <label>Enter a String:</label>
+        <input type="text" id="str"><br>
+        <label>Starting element to check:</label>
+        <input type="text" id="start"><br>
+        <label>Ending element to check:</label>
+        <input type="text" id="end"><br>
+        <button id="checkconditon">Check Conditions</button>
+        <p id="condition"></p>
+
+        <script>
+
+            document.getElementById("checkconditon").onclick = function checkcondition() {
+                let str = document.getElementById("str").value;
+                let len = str.length;
+                let start = document.getElementById("start").value;
+                let end = document.getElementById("end").value;
+
+                if(str.startsWith(start) && str.endsWith(end)) {
+                    document.getElementById("condition").innerHTML = "Conditions are met.";
+                }
+                else {
+                    document.getElementById("condition").innerHTML = "Conditions are not met.";
+                }
+                
+            }
+           
+        </script>
+    </body>
+</html>

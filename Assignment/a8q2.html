@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>A8Q2</title>
+    </head>
+    <body>
+        
+        <label>Enter height of Triangle:</label>
+        <input type="number" id="height"><br>
+        <label>Enter base of Triangle:</label>
+        <input type="number" id="base"><br>
+        <button id="checkarea">Check Area</button>
+        <p id="area"></p>
+        
+        <script>
+
+            document.getElementById("checkarea").onclick = function area90() {
+            let height = document.getElementById("height").value;
+            let base = document.getElementById("base").value;
+            let area = 0.5*height*base;
+            document.getElementById("area").innerHTML = "Area of Triangle is "+area+".";
+           }
+           
+        </script>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>A8Q14</title>
+    </head>
+    <body>
+
+        <label>Enter a String:</label>
+        <input type="text" id="str"><br>
+        <label>Enter substring:</label>
+        <input type="text" id="substr"><br>
+        <button id="checkcontainment">Check Containment</button>
+        <p id="containment"></p>
+
+        <script>
+
+            document.getElementById("checkcontainment").onclick = function checkcontainment() {
+                let str = document.getElementById("str").value;
+                let len = str.length;
+                let substr = document.getElementById("substr").value;
+                let sublen = substr.length;
+                let pos = 0;
+
+                for(let i = 0; i < len && pos < sublen; i++) {
+                    if(str[i] == substr[pos]) {
+                        pos++;
+                    }
+                    else {
+                        pos = 0;
+                    }
+                }
+
+                if(substr[pos-1] == substr[sublen-1])
+                {
+                    document.getElementById("containment").innerHTML = "Substring is contained in the String.";
+                }
+                else {
+                    document.getElementById("containment").innerHTML = "Substring is not contained in the String.";
+                }
+                
+            }
+           
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>A5Q5</title>
+    </head>
+    <body>
+        <script>
+            let num = parseInt(prompt("Enter a Number to get Factorial:"));
+            let fact = 1;
+            if (num < 0) 
+            {
+            alert("Please Enter a Positive Number.");
+            location.reload();
+            }
+            else
+            {
+             for( let i=num; i>0; i--)
+             fact = fact*i;
+             alert("Factorial of "+num+" is "+fact+".");
+            }
+        </script>
+    </body>
+</html>

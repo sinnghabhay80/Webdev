@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>A8Q3</title>
+    </head>
+    <body>
+        
+        <label>Enter Triangle's 1st side:</label>
+        <input type="number" id="side1"><br>
+        <label>Enter Triangle's 2nd side:</label>
+        <input type="number" id="side2"><br>
+        <label>Enter Triangle's 3rd side:</label>
+        <input type="number" id="side3"><br>
+        <button id="getinfo">Get Info</button>
+        <p id="info"></p>
+        
+        <script>
+
+            document.getElementById("getinfo").onclick = function triangleinfo() {
+                let side1 = document.getElementById("side1").value;
+                let side2 = document.getElementById("side2").value;
+                let side3 = document.getElementById("side3").value;
+                let area,h,p;
+
+                if( side1 == side2 && side1 == side3) {
+                    document.getElementById("info").innerHTML = "Triangle is Equilateral.<br>";
+                    area = Math.sqrt(3)*((side1)^2)/4 ;
+                }
+
+                else if(side1 == side2 && side1 != side3) {
+                    document.getElementById("info").innerHTML = "Triangle is Isosceles.<br>";
+                    h = Math.sqrt(side2 ** 2 - (side3 ** 2) / 4);
+                    area = 0.5*side3*h;
+                }
+
+                else if(side1 == side3 && side1 != side2) {
+                    document.getElementById("info").innerHTML = "Triangle is Isosceles.<br>";
+                    h = Math.sqrt(side1 ** 2 - (side2 ** 2) / 4);
+                    area = 0.5*side2*h;
+                }
+
+                else if(side2 == side3 && side2 != side1) {
+                    document.getElementById("info").innerHTML = "Triangle is Isosceles.<br>";
+                    h = Math.sqrt(side2 ** 2 - (side1 ** 2) / 4);
+                    area = 0.5*side1*h;
+                }
+
+                else if(side1 != side2 && side1 != side3 && side2 != side3) {
+                    document.getElementById("info").innerHTML = "Triangle is Scalene.<br>";
+                    p = (side1 + side2 + side3)/2;
+                    area = Math.sqrt(p*(p-side1)*(p-side2)*(p-side3));
+                }
+
+                document.getElementById("info").innerHTML = document.getElementById("info").innerHTML + "Area of Triangle is "+area+".";
+           }
+           
+        </script>
+    </body>
+</html>

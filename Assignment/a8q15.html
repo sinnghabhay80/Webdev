@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>A8Q15</title>
+    </head>
+    <body>
+
+        <label>Enter a String:</label>
+        <input type="text" id="str"><br>
+        <button id="convert">Convert</button>
+        <p id="converted"></p>
+
+        <script>
+
+            document.getElementById("convert").onclick = function convert() {
+                let str = document.getElementById("str").value;
+                str = str.charAt(0).toUpperCase() + str.slice(1);
+
+                document.getElementById("converted").innerHTML = "Converted: "+str ;
+            }
+           
+        </script>
+    </body>
+</html>

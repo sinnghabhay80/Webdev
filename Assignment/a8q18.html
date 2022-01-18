@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>A8Q18</title>
+    </head>
+    <body>
+
+        <label>Enter a String:</label>
+        <input type="text" id="str"><br>
+        <button id="reversing">Reverse</button>
+        <p id="reversed"></p>
+
+        <script>
+
+            document.getElementById("reversing").onclick = function reversing() {
+                let str = document.getElementById("str").value;
+                let revstr = "";
+                let len = str.length;
+                for(let i=(len-1); i >= 0; i--) {
+                    revstr += str[i];
+                }
+                document.getElementById("reversed").innerHTML = "Reversed: "+revstr;
+            }
+           
+        </script>
+    </body>
+</html>

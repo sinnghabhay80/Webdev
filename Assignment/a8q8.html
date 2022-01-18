@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>A8Q8</title>
+    </head>
+    <body>
+
+        <label>Enter a number:</label>
+        <input type="number" id="num">
+        <button id="checkarmstrong">Check Armstrong</button>
+        <p id="armstrong"></p>
+
+        <script>
+
+            document.getElementById("checkarmstrong").onclick = function result() {
+                let num = document.getElementById("num").value;
+                let res = armstrong(num);
+                document.getElementById("armstrong").innerHTML = res;
+            }
+
+            function armstrong(n) {
+                let temp = n;
+                let digits = n.length;
+                let sum = 0;
+                
+                while(temp>0) {
+                    let r = temp%10;
+                    sum += r**digits;
+                    temp = parseInt(temp/10);
+                }
+
+                if(sum == n) {
+                    return "Yes, it is a Armstrong Number";
+                }
+                else {
+                    return "No, it is not a Armstrong Number";
+                }
+            }
+           
+        </script>
+    </body>
+</html>

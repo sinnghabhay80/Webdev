@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>A8Q9</title>
+    </head>
+    <body>
+
+        <label>Enter 1st Number:</label>
+        <input type="number" id="num1"><br>
+        <label>Enter 2nd Number:</label>
+        <input type="number" id="num2"><br>
+        <label>Enter 3rd Number:</label>
+        <input type="number" id="num3"><br>
+        <button id="checksamelast">Check!!</button>
+        <p id="samelast"></p>
+
+        <script>
+
+            document.getElementById("checksamelast").onclick = function result() {
+                let num1 = document.getElementById("num1").value;
+                let num2 = document.getElementById("num2").value;
+                let num3 = document.getElementById("num3").value;
+                let res = checksamelast(num1, num2, num3);
+                document.getElementById("samelast").innerHTML = res;
+            }
+
+            function checksamelast(n1, n2, n3) {
+                let c1 = n1%10;
+                let c2 = n2%10;
+                let c3 = n3%10;
+
+                if(c1 == c2 && c1 == c3) {
+                    return "Yes, they have same last digit."
+                }
+                else {
+                    return "No, last digits are different."
+                }
+            }
+           
+        </script>
+    </body>
+</html>

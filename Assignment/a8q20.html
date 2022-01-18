@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>A8Q20</title>
+    </head>
+    <body>
+
+        <label>Enter a String:</label>
+        <input type="text" id="str"><br>
+        <button id="newchange">New! Change</button>
+        <p id="newchanged"></p>
+
+        <script>
+
+            document.getElementById("newchange").onclick = function newappend() {
+                let str = document.getElementById("str").value;
+                let newchange = "New!";
+                let temp = str.slice(0, 4);
+                if(temp == newchange) {
+                    document.getElementById("newchanged").innerHTML = "No Change: "+str ;
+                }
+                else {
+                    document.getElementById("newchanged").innerHTML = "Changed: "+newchange+str ;
+                }
+            }
+           
+        </script>
+    </body>
+</html>

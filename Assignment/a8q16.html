@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>A8Q16</title>
+    </head>
+    <body>
+        
+        <label>Enter a number:</label>
+        <input type="number" id="num">
+        <button id="makefibonacci">Fibonacci Till</button>
+        <p id="fibonacci"></p>
+        
+        <script>
+
+           document.getElementById("makefibonacci").onclick =function makefibonacci() {
+           let num = document.getElementById("num").value;
+           let n1 = 0, n2 = 1, next = n1 + n2;
+           document.getElementById("fibonacci").innerHTML = "Fibonacci Series: "+n1+", "+n2 ;
+          
+           while(next <= num) {
+                document.getElementById("fibonacci").innerHTML = document.getElementById("fibonacci").innerHTML +", "+next ;
+                n1 = n2;
+                n2 = next;
+                next = n1 + n2;
+           }
+           }     
+        
+        </script>
+    </body>
+</html>

@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>A8Q11</title>
+    </head>
+    <body>
+
+        <label>Enter a String:</label>
+        <input type="text" id="str">
+        <button id="checkpalindrome">Check Palindrome</button>
+        <p id="palindrome"></p>
+
+        <script>
+
+            document.getElementById("checkpalindrome").onclick = function checkpalindrome() {
+                let str = document.getElementById("str").value;
+                let revstr = "";
+                let len = str.length;
+
+                for(let i = (len-1); i>=0; i--) {
+                    revstr += str[i];
+                }
+
+                if(str == revstr) {
+                    document.getElementById("palindrome").innerHTML = "Yes, string is a Palindrome.";
+                }
+                else {
+                    document.getElementById("palindrome").innerHTML = "No, string is not a Palindrome.";
+                }
+            }
+           
+        </script>
+    </body>
+</html>

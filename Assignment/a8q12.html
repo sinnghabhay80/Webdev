@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>A8Q12</title>
+    </head>
+    <body>
+
+        <label>Enter a String:</label>
+        <input type="text" id="str"><br>
+        <label>Element to check:</label>
+        <input type="text" id="char"><br>
+        <button id="checkoccurance">Check Occurances</button>
+        <p id="occurance"></p>
+
+        <script>
+
+            document.getElementById("checkoccurance").onclick = function checkoccurance() {
+                let times = 0;
+                let str = document.getElementById("str").value;
+                let len = str.length;
+                let char = document.getElementById("char").value;
+
+                for(let i = 0; i < len; i++) {
+                    if(str[i] == char) {
+                        times++;
+                    }
+                }
+                document.getElementById("occurance").innerHTML = "Character "+char+" appears "+times+" times in string "+str+"."
+            }
+           
+        </script>
+    </body>
+</html>

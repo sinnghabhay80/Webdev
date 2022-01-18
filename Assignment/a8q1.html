@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>A8Q1</title>
+    </head>
+    <body>
+        
+        <label>Enter a number:</label>
+        <input type="number" id="num">
+        <button id="checksqrt">Check SQRT</button>
+        <p id="sqrt"></p>
+        
+        <script>
+
+           document.getElementById("checksqrt").onclick =function sqrt() {
+           let num = document.getElementById("num").value;
+           let sqrt = Math.sqrt(num);
+           document.getElementById("sqrt").innerHTML = "Square Root of "+num+" is "+sqrt+".";
+           }     
+        
+        </script>
+    </body>
+</html>
